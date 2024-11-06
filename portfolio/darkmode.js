@@ -1,5 +1,8 @@
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const darkModeIcon = darkModeToggle.querySelector('i');
+var darkModeEnabled =  window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if(darkModeEnabled) localStorage.setItem('dark-mode', 'enabled');
 
 if (localStorage.getItem('dark-mode') === 'enabled') {
     document.body.classList.remove('light-mode');
