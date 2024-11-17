@@ -1597,8 +1597,8 @@ section,
 }
 
 /* Ensure the images cover the entire carousel without distortion */
-.carousel-item img {
-    height: 100%;
+.project img {
+    height: 400px;
     width: 100%;
     object-fit: cover;
     /* Cover the whole area without stretching */
