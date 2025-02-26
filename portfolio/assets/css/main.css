@@ -1720,6 +1720,10 @@ section,
     text-decoration: none;
 }
 
+img {
+    border: 1px solid black;
+}
+
 
 .irregular-image {
     width: 420px;
