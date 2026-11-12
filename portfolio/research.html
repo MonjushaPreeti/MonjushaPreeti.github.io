@@ -15,9 +15,29 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        /* Keep the research writing layout, but reduce large gaps between parts */
+        .research-page .portfolio-details.section {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        .research-page .portfolio-details.section:first-of-type {
+            padding-top: 140px;
+            padding-bottom: 24px;
+        }
+
+        .research-page .portfolio-description {
+            padding-top: 8px;
+        }
+
+        .research-page .resume-title {
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 
-<body class="resume-page">
+<body class="portfolio-details-page research-page">
 
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -45,127 +65,156 @@
 
     <main class="main">
 
-        <section id="resume" class="resume section">
+        <!-- Ongoing Research -->
+        <section class="portfolio-details section">
             <div class="container">
-
                 <h3 class="resume-title"><i class="fa-solid fa-flask"></i> Ongoing Research</h3>
 
-                <div class="resume-item">
-                    <h4>Prompt Optimization, Evolutionary Algorithms &amp; Agentic AI</h4>
-                    <h5 class="resume-time">Spring 2026 - Present</h5>
-                    <p><em>Artificial Intelligence and Security Lab, Boise State University</em>
-                        <span class="text-primary" style="white-space:nowrap; font-size:0.85em;"> &middot; In Progress</span>
+                <div class="portfolio-description mb-4">
+                    <h5>
+                        <span class="research-title">Prompt Optimization, Evolutionary Algorithms &amp; Agentic AI</span>
+                        <span class="resume-time">(Boise State University, Spring 2026&ndash;Present)</span>
+                        <span class="text-primary" style="white-space:nowrap; font-size:0.7em;">In Progress</span>
+                    </h5>
+                    <p>
+                        Under the supervision of Dr. Edoardo Serra in the Artificial Intelligence and Security Lab, I am developing evolutionary-algorithm approaches for prompt optimization, studying how search-based methods can improve LLM prompting strategies. This line of work also connects to agentic AI systems and prompt injection robustness. The project is active and not yet published.
                     </p>
-                    <ul>
-                        <li><i class="bi bi-dot"></i> Developing evolutionary-algorithm approaches for prompt optimization under the supervision of Dr. Edoardo Serra</li>
-                        <li><i class="bi bi-dot"></i> Related directions include agentic AI systems and prompt injection robustness</li>
-                    </ul>
                 </div>
 
-                <div class="resume-item">
-                    <h4>LLM Metacognition</h4>
-                    <h5 class="resume-time">Spring 2026 - Present</h5>
-                    <p><em>Artificial Intelligence and Security Lab, Boise State University</em>
-                        <span class="text-primary" style="white-space:nowrap; font-size:0.85em;"> &middot; In Progress</span>
+                <div class="portfolio-description">
+                    <h5>
+                        <span class="research-title">LLM Metacognition</span>
+                        <span class="resume-time">(Boise State University, Spring 2026&ndash;Present)</span>
+                        <span class="text-primary" style="white-space:nowrap; font-size:0.7em;">In Progress</span>
+                    </h5>
+                    <p>
+                        I am investigating LLM metacognition by analyzing how models behave under standard versus optimized prompts on a curated dataset. The goal is to characterize differences in reasoning, confidence, and response quality between baseline and optimized prompting strategies, and to better understand when and why optimized prompts change model behavior. This work is ongoing and not yet published.
                     </p>
-                    <ul>
-                        <li><i class="bi bi-dot"></i> Analyzing how models behave under standard versus optimized prompts on a curated dataset</li>
-                        <li><i class="bi bi-dot"></i> Characterizing differences in reasoning, confidence, and response quality across prompting strategies</li>
-                    </ul>
                 </div>
+            </div>
+        </section>
 
+        <!-- Publications -->
+        <section class="portfolio-details section">
+            <div class="container">
                 <h3 class="resume-title"><i class="fa-solid fa-book"></i> Publications</h3>
 
-                <div class="resume-item">
-                    <h4>Ensemble Approach for Misogyny Detection in Memes Using Pre-trained Text and Vision Transformers</h4>
-                    <h5 class="resume-time">2025</h5>
-                    <p><em>Neelima Monjusha Preeti, Trina Chakraborty, Noor Mairukh Khan Arnob, Saiyara Mahmud, Azmine Toushik Wasi</em></p>
-                    <p>DravidianLangTech-2025 Shared Task.
-                        <span class="text-success" style="white-space:nowrap; font-size:0.85em;">Published</span>
-                    </p>
-                    <ul>
-                        <li><i class="bi bi-dot"></i> Multimodal misogyny detection in Tamil and Malayalam memes using CLIP and BERT</li>
-                        <li><i class="bi bi-dot"></i> Macro F1: 0.7800 (Tamil), 0.8748 (Malayalam)</li>
-                    </ul>
+                <div class="portfolio-description mb-4">
+                    <h5>
+                        Neelima Monjusha Preeti, Trina Chakraborty, Noor Mairukh Khan Arnob, Saiyara Mahmud, Azmine Toushik Wasi
+                        <span class="resume-time">(2025)</span>.
+                        <span class="research-title"> Ensemble Approach for Misogyny Detection in Memes Using Pre-trained Text and Vision Transformers</span>,
+                        Fifth Workshop on Speech, Vision, and Language Technologies for Dravidian Languages (DravidianLangTech-2025).
+                        <span class="text-success" style="white-space:nowrap; font-size:0.7em;">Published&nbsp;<i class="fas fa-check-circle"></i></span>
+                    </h5>
                     <p>
-                        <a href="https://aclanthology.org/2025.dravidianlangtech-1.63/" target="_blank" class="btn btn-custom-outline">Publication <i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://github.com/HerWILL-Inc/NAACL-2025" target="_blank" class="btn btn-custom-outline">Code <i class="fas fa-external-link-alt"></i></a>
+                        Shared-task paper on multimodal misogyny detection in Tamil and Malayalam memes, combining CLIP-based vision embeddings with BERT text models. Achieved Macro F1 scores of 0.7800 (Tamil) and 0.8748 (Malayalam).
                     </p>
+                    <a href="https://aclanthology.org/2025.dravidianlangtech-1.63/" target="_blank" class="btn btn-custom-outline">
+                        Publication <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="https://github.com/HerWILL-Inc/NAACL-2025" target="_blank" class="btn btn-custom-outline">
+                        Code <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
 
-                <div class="resume-item">
-                    <h4>Accommodation Review Ranking for Tourism Recommendation</h4>
-                    <h5 class="resume-time">2024</h5>
-                    <p><em>Emrul Hasan, Chen Ding, Sajib Saha, Neelima Monjusha Preeti, Abdul Halim</em></p>
-                    <p>RecTour 2024 (Booking.com Challenge), co-located with ACM RecSys.
-                        <span class="text-success" style="white-space:nowrap; font-size:0.85em;">Published</span>
-                    </p>
-                    <ul>
-                        <li><i class="bi bi-dot"></i> Similarity-based review ranking with Sentence Transformers and cosine similarity</li>
-                    </ul>
+                <div class="portfolio-description mb-4">
+                    <h5>
+                        Emrul Hasan, Chen Ding, Sajib Saha, Neelima Monjusha Preeti and Abdul Halim
+                        <span class="resume-time">(2024)</span>.
+                        <span class="research-title"> Accommodation Review Ranking for Tourism Recommendation</span>
+                        (RecTour 2024), co-located with ACM RecSys, Bari, Italy.
+                        <span class="text-success" style="white-space:nowrap; font-size:0.7em;">Published&nbsp;<i class="fas fa-check-circle"></i></span>
+                    </h5>
                     <p>
-                        <a href="https://ceur-ws.org/Vol-3886/challenge3.pdf" target="_blank" class="btn btn-custom-outline">Publication <i class="fas fa-external-link-alt"></i></a>
+                        Challenge paper for the Booking.com 2024 review-ranking task. Ranks accommodation reviews using similarity-based user and item profiles, Sentence Transformer features, and cosine similarity to better match user preferences.
                     </p>
+                    <a href="https://ceur-ws.org/Vol-3886/challenge3.pdf" target="_blank" class="btn btn-custom-outline">
+                        Publication <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
 
-                <div class="resume-item">
-                    <h4>Handover Detection of WAN using FIS</h4>
-                    <h5 class="resume-time">2023</h5>
-                    <p><em>Neelima Monjusha Preeti, Faiza Feroz, Dr. Md. Imdadul Islam</em></p>
-                    <p>Jahangirnagar University Journal of Electronics and Computer Science.
-                        <span class="text-success" style="white-space:nowrap; font-size:0.85em;">Published</span>
-                    </p>
-                    <ul>
-                        <li><i class="bi bi-dot"></i> Fuzzy Inference System for handover detection using velocity, SNR, SINR, and acceleration</li>
-                        <li><i class="bi bi-dot"></i> Evaluated four defuzzification methods with over 92% accuracy</li>
-                    </ul>
+                <div class="portfolio-description">
+                    <h5>
+                        Neelima Monjusha Preeti, Faiza Feroz, Dr. Md. Imdadul Islam
+                        <span class="resume-time">(2023)</span>.
+                        <span class="research-title"> Handover Detection of WAN using FIS</span>,
+                        Jahangirnagar University Journal of Electronics and Computer Science.
+                        <span class="text-success" style="white-space:nowrap; font-size:0.7em;">Published&nbsp;<i class="fas fa-check-circle"></i></span>
+                    </h5>
                     <p>
-                        <a href="https://ecs.ju-journal.org/jujecs/article/view/35/34" target="_blank" class="btn btn-custom-outline">Publication <i class="fas fa-external-link-alt"></i></a>
+                        Introduces a Fuzzy Inference System for handover detection in high-speed WAN settings using velocity, SNR, SINR, and acceleration. Four defuzzification methods are evaluated, each achieving over 92% accuracy.
                     </p>
+                    <a href="https://ecs.ju-journal.org/jujecs/article/view/35/34" target="_blank" class="btn btn-custom-outline">
+                        Publication <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
+            </div>
+        </section>
 
+        <!-- Thesis -->
+        <section class="portfolio-details section">
+            <div class="container">
                 <h3 class="resume-title"><i class="fa-solid fa-graduation-cap"></i> Thesis</h3>
 
-                <div class="resume-item">
-                    <h4>Detection of Brain Tumor from MRI Image under Deep Learning and Bag of Features Algorithm</h4>
-                    <h5 class="resume-time">2024</h5>
-                    <p><em>Neelima Monjusha Preeti, Dr. Md. Imdadul Islam &mdash; Master&rsquo;s Thesis</em></p>
-                    <ul>
-                        <li><i class="bi bi-dot"></i> Brain tumor detection from MRI using preprocessing, CNN/LSTM, and Bag-of-Features</li>
-                    </ul>
+                <div class="portfolio-description">
+                    <h5>
+                        Neelima Monjusha Preeti, Dr. Md. Imdadul Islam
+                        <span class="resume-time">(2024)</span>.
+                        <span class="research-title"> Detection of Brain Tumor from MRI Image under Deep Learning and Bag of Features Algorithm</span>
+                        [Master&rsquo;s Thesis]
+                    </h5>
                     <p>
-                        <a href="research_brain_tumor.html" class="btn btn-custom-outline">Details <i class="fas fa-external-link-alt"></i></a>
+                        Detects brain tumors in MRI images using preprocessing and pseudo-coloring, followed by CNN and LSTM training. The Bag-of-Features (BoF) algorithm is applied to the preprocessed dataset to support accurate detection.
                     </p>
+                    <a href="research_brain_tumor.html" class="btn btn-custom-outline">
+                        Details <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
+            </div>
+        </section>
 
+        <!-- In Preparation -->
+        <section class="portfolio-details section">
+            <div class="container">
                 <h3 class="resume-title"><i class="fa-solid fa-pen"></i> In Preparation</h3>
 
-                <div class="resume-item">
-                    <h4>Feature Ranking for Polycystic Ovary Syndrome (PCOS) Detection using XAI from Ultrasound Images</h4>
-                    <h5 class="resume-time">2024</h5>
-                    <p><em>Neelima Monjusha Preeti, Sushmoy Barua, Anup Majumdar</em>
-                        <span class="text-warning" style="white-space:nowrap; font-size:0.85em;"> &middot; In Preparation</span>
+                <div class="portfolio-description">
+                    <h5>
+                        Neelima Monjusha Preeti, Sushmoy Barua, Anup Majumdar
+                        <span class="resume-time">(2024)</span>.
+                        <span class="research-title"> Feature Ranking for Polycystic Ovary Syndrome (PCOS) Detection using XAI from Ultrasound Images</span>
+                        <span class="text-warning" style="white-space:nowrap; font-size:0.7em;">In Preparation</span>
+                    </h5>
+                    <p>
+                        Applies explainable AI to deep learning models for PCOS detection from ultrasound images, ranking clinically meaningful features such as ovarian volume, follicle count, and stromal area to improve transparency and support more interpretable diagnosis.
                     </p>
-                    <ul>
-                        <li><i class="bi bi-dot"></i> Explainable AI feature ranking for PCOS detection from ultrasound images</li>
-                    </ul>
                 </div>
+            </div>
+        </section>
 
+        <!-- Selected Earlier Work -->
+        <section class="portfolio-details section">
+            <div class="container">
                 <h3 class="resume-title"><i class="fa-solid fa-clock-rotate-left"></i> Selected Earlier Work</h3>
 
-                <div class="resume-item">
-                    <h4>Building Rich Community with DHR System and using ML for Decision Making</h4>
-                    <h5 class="resume-time">2021</h5>
-                    <p><em>Neelima Monjusha Preeti, Rubaiya Reza Sohana, Sabrina Afrin Toma &mdash; International Poster Competition</em></p>
-                    <ul>
-                        <li><i class="bi bi-dot"></i> Digital Health Record proposal with ML for community health decision support</li>
-                    </ul>
+                <div class="portfolio-description">
+                    <h5>
+                        Neelima Monjusha Preeti, Rubaiya Reza Sohana, Sabrina Afrin Toma
+                        <span class="resume-time">(2021)</span>.
+                        <span class="research-title"> Building Rich Community with DHR System and using ML for Decision Making ensuring Enriched Health Facility and eradicating Health Myths</span>
+                        [International Poster Competition]
+                    </h5>
                     <p>
-                        <a href="./assets/poster.pdf" target="_blank" class="btn btn-custom-outline">View Poster <i class="fas fa-external-link-alt"></i></a>
-                        <a href="poster_health_myth.html" class="btn btn-custom-outline">Details <i class="fas fa-external-link-alt"></i></a>
+                        Proposes a Digital Health Record system supported by regional health workers and machine learning for predictive modeling, aiming to strengthen community health outcomes in resource-constrained settings.
                     </p>
+                    <a href="./assets/poster.pdf" target="_blank" class="btn btn-custom-outline">
+                        View Poster <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="poster_health_myth.html" target="_self" class="btn btn-custom-outline">
+                        Details <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
-
             </div>
         </section>
 
